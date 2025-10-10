@@ -37,7 +37,7 @@ const client = ['browse', 'main'].map(entryName => {
     },
     plugins: [
       manifest.record({ publicPath: '/_client/' }),
-      babel({ exclude: /node_modules/ }),
+      babel({ babelHelpers: 'bundled', exclude: /node_modules/ }),
       json(),
       resolve(),
       commonjs({
@@ -76,7 +76,7 @@ const server = {
   },
   plugins: [
     manifest.inject({ virtualId: 'entry-manifest' }),
-    babel({ exclude: /node_modules/ }),
+    babel({ babelHelpers: 'bundled', exclude: /node_modules/ }),
     json(),
     resolve(),
     commonjs(),

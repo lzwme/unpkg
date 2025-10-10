@@ -9,7 +9,7 @@ export function ContentArea({ children, css }) {
       css={{
         border: '1px solid #dfe2e5',
         borderRadius: 3,
-        [`@media (max-width: ${maxWidth}px)`]: {
+        [`'@media (max-width: ${maxWidth}px)'`]: {
           borderRightWidth: 0,
           borderLeftWidth: 0
         },
@@ -36,7 +36,7 @@ export function ContentAreaHeaderBar({ children, css }) {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        [`@media (max-width: ${maxWidth}px)`]: {
+        [`'@media (max-width: ${maxWidth}px)'`]: {
           paddingRight: 20,
           paddingLeft: 20
         },
